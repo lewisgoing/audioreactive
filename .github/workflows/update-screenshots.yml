@@ -1,0 +1,79 @@
+name: Update Website Screenshots
+
+on:
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly on Sunday
+  workflow_dispatch:  # Manual trigger
+  push:
+    branches: [main]
+    paths: ['README.md']
+
+jobs:
+  screenshot:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        
+    - name: Install Playwright
+      run: |
+        npm install -g playwright-chromium
+        playwright install chromium
+        
+    - name: Take Screenshots
+      run: |
+        mkdir -p images
+        
+        # Screenshot ASCII Visualizer
+        npx playwright-cli screenshot \
+          --viewport-size=1200,800 \
+          --wait-for-timeout=3000 \
+          https://ascii.lewisgo.ing \
+          images/ascii-visualizer.png
+          
+        # Screenshot Dithering Demo  
+        npx playwright-cli screenshot \
+          --viewport-size=1200,800 \
+          --wait-for-timeout=3000 \
+          https://dither.lewisgo.ing \
+          images/dithering-demo.png
+          
+        # Screenshot Music Player
+        npx playwright-cli screenshot \
+          --viewport-size=1200,800 \
+          --wait-for-timeout=3000 \
+          https://player.lewisgo.ing \
+          images/music-player.png
+          
+    - name: Optimize Images
+      run: |
+        # Install imagemin-cli for optimization
+        npm install -g imagemin-cli imagemin-pngquant
+        
+        # Optimize screenshots
+        imagemin images/*.png --out-dir=images --plugin=pngquant
+        
+    - name: Commit Screenshots
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        git add images/
+        
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Update website screenshots 📸
+          
+          🤖 Generated with [Claude Code](https://claude.ai/code)
+          
+          Co-Authored-By: Claude <noreply@anthropic.com>"
+          git push
+        fi

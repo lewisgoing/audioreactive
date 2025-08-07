@@ -9,6 +9,8 @@ Collection of real-time audio-reactive visualizations and applications that tran
 
 Real-time 3D ASCII art generated from audio frequencies using Three.js and Web Audio API.
 
+[![ASCII Visualizer Screenshot](./images/ascii-visualizer.png)](https://ascii.lewisgo.ing)
+
 **🚀 [Live Demo](https://ascii.lewisgo.ing)**
 
 ### 🎭 [Dithering WebGL Demo](./audioreactive-dithering-webgl-demo)
@@ -16,12 +18,16 @@ Real-time 3D ASCII art generated from audio frequencies using Three.js and Web A
 
 Audio-reactive dithering effects with Bayer pattern algorithms in WebGL shaders.
 
+[![Dithering Demo Screenshot](./images/dithering-demo.png)](https://dither.lewisgo.ing)
+
 **🚀 [Live Demo](https://dither.lewisgo.ing)**
 
 ### 🎵 [Music Player](./audioreactive-music-player)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white) ![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black) ![Tailwind](https://img.shields.io/badge/Tailwind-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
 
 Modern web music player with real-time audio visualizations and customizable themes.
+
+[![Music Player Screenshot](./images/music-player.png)](https://player.lewisgo.ing)
 
 **🚀 [Live Demo](https://player.lewisgo.ing)**
 
