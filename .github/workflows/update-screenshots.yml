@@ -24,33 +24,43 @@ jobs:
         
     - name: Install Playwright
       run: |
-        npm install -g playwright-chromium
-        playwright install chromium
+        npm init -y
+        npm install playwright
+        npx playwright install chromium
+        
+    - name: Create Screenshot Script
+      run: |
+        cat > screenshot.js << 'EOF'
+        const { chromium } = require('playwright');
+        
+        (async () => {
+          const browser = await chromium.launch();
+          const page = await browser.newPage();
+          await page.setViewportSize({ width: 1200, height: 800 });
+          
+          // Screenshot ASCII Visualizer
+          await page.goto('https://ascii.lewisgo.ing', { waitUntil: 'networkidle' });
+          await page.waitForTimeout(3000);
+          await page.screenshot({ path: 'images/ascii-visualizer.png' });
+          
+          // Screenshot Dithering Demo
+          await page.goto('https://dither.lewisgo.ing', { waitUntil: 'networkidle' });
+          await page.waitForTimeout(3000);
+          await page.screenshot({ path: 'images/dithering-demo.png' });
+          
+          // Screenshot Music Player
+          await page.goto('https://player.lewisgo.ing', { waitUntil: 'networkidle' });
+          await page.waitForTimeout(3000);
+          await page.screenshot({ path: 'images/music-player.png' });
+          
+          await browser.close();
+        })();
+        EOF
         
     - name: Take Screenshots
       run: |
         mkdir -p images
-        
-        # Screenshot ASCII Visualizer
-        npx playwright-cli screenshot \
-          --viewport-size=1200,800 \
-          --wait-for-timeout=3000 \
-          https://ascii.lewisgo.ing \
-          images/ascii-visualizer.png
-          
-        # Screenshot Dithering Demo  
-        npx playwright-cli screenshot \
-          --viewport-size=1200,800 \
-          --wait-for-timeout=3000 \
-          https://dither.lewisgo.ing \
-          images/dithering-demo.png
-          
-        # Screenshot Music Player
-        npx playwright-cli screenshot \
-          --viewport-size=1200,800 \
-          --wait-for-timeout=3000 \
-          https://player.lewisgo.ing \
-          images/music-player.png
+        node screenshot.js
           
     - name: Optimize Images
       run: |
