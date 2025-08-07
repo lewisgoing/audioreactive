@@ -1,0 +1,10 @@
+[submodule "audioreactive-dithering-webgl-demo"]
+	path = audioreactive-dithering-webgl-demo
+	url = https://github.com/lewisgoing/audioreactive-dithering-webgl-demo.git
+[submodule "audioreactive-3d-ascii-visualizer"]
+	path = audioreactive-3d-ascii-visualizer
+	url = https://github.com/lewisgoing/audioreactive-3d-ascii-visualizer.git
+	branch = original-nocam
+[submodule "audioreactive-music-player"]
+	path = audioreactive-music-player
+	url = https://github.com/lewisgoing/audioreactive-music-player.git
