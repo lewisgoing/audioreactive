@@ -4,7 +4,7 @@ Collection of real-time audio-reactive visualizations and applications that tran
 
 ## 🎨 Projects
 
-### 🔤 [3D ASCII Visualizer](./audioreactive-3d-ascii-visualizer)
+### 🔤 [3D ASCII Visualizer](https://ascii.lewisgo.ing)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white) ![WebGL](https://img.shields.io/badge/WebGL-990000?style=flat&logo=webgl&logoColor=white)
 
 Real-time 3D ASCII art generated from audio frequencies using Three.js and Web Audio API.
@@ -31,6 +31,8 @@ Modern web music player with real-time audio visualizations and customizable the
 Real-time audio-reactive particle system using WebGL and GPGPU techniques for high-performance visual effects.
 
 Inspired by [PentaCreation](https://www.pentacreation.com/webvr/lab/41/).
+
+**🚀 [Live Demo](https://particles.lewisgo.ing)**
 
 ## 🚀 Quick Start
 
