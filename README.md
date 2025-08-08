@@ -2,6 +2,12 @@
 
 Collection of real-time audio-reactive visualizations and applications that transform sound into visual art.
 
+## QuickLinks
+- [ascii.lewisgo.ing](https://ascii.lewisgo.ing)
+- [dither.lewisgo.ing](https://ascii.lewisgo.ing)
+- [player.lewisgo.ing](https://ascii.lewisgo.ing)
+- [particles.lewisgo.ing](https://ascii.lewisgo.ing)
+
 ## 🎨 Projects
 
 ### 🔤 [3D ASCII Visualizer](https://ascii.lewisgo.ing)
