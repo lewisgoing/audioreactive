@@ -25,6 +25,13 @@ Modern web music player with real-time audio visualizations and customizable the
 
 **🚀 [Live Demo](https://player.lewisgo.ing)**
 
+### ✨ [GPGPU Particles](./audioreactive-gpgpu-particles)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) ![WebGL](https://img.shields.io/badge/WebGL-990000?style=flat&logo=webgl&logoColor=white) ![GLSL](https://img.shields.io/badge/GLSL-5586A4?style=flat&logo=opengl&logoColor=white)
+
+Real-time audio-reactive particle system using WebGL and GPGPU techniques for high-performance visual effects.
+
+Inspired by [PentaCreation](https://www.pentacreation.com/webvr/lab/41/).
+
 ## 🚀 Quick Start
 
 ```bash
