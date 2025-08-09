@@ -10,4 +10,4 @@
 	url = https://github.com/lewisgoing/audioreactive-music-player.git
 [submodule "audioreactive-gpgpu-particles"]
 	path = audioreactive-gpgpu-particles
-	url = https://github.com/lewisgoing/audioreactive-gpgpu-particles.git
+	url = https://github.com/lewisgoing/audioreactive-gpgpu-particle-demo.git
