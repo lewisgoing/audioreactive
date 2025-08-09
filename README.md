@@ -4,9 +4,9 @@ Collection of real-time audio-reactive visualizations and applications that tran
 
 ## QuickLinks
 - [ascii.lewisgo.ing](https://ascii.lewisgo.ing)
-- [dither.lewisgo.ing](https://ascii.lewisgo.ing)
-- [player.lewisgo.ing](https://ascii.lewisgo.ing)
-- [particles.lewisgo.ing](https://ascii.lewisgo.ing)
+- [dither.lewisgo.ing](https://dither.lewisgo.ing)
+- [player.lewisgo.ing](https://player.lewisgo.ing)
+- [particles.lewisgo.ing](https://particles.lewisgo.ing)
 
 ## 🎨 Projects
 
